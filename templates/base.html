@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport contents='' width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
+    <!-- Kokee CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    <title>Hello, Kokeetea!</title>
+</head>
+<body>
+<!-- 네비게이션 바 시작
+<nav class="navbar navbar-expand-lg navbar-light bg-light border-botom">
+    <a class="navbar-brand" href="{%url 'kokee:index' %}">Kokeetea</a>
+    <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
+            data-target="#navbarNav" aria-controls="navbarNav"
+            aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse flex-grow-0" id="navbarNav">
+        <ul class="navbar-Nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#">로그인</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+ 네비게이션 바 끝 -->
+{% include "navbar.html" %}
+<!-- 기본 템플릿 안에 삽입될 내용 시작 -->
+{% block content %}
+{% endblock %}
+<!-- 기본 템플릿 안에 삽입될 내용 종료 -->
+<!-- JQuery JS -->
+<script src="{% static 'jquery-3.6.0.min.js' %}"></script>
+<script src="{% static 'Bootstrap.min.js' %}"></script>
+<!-- Bootstrap JS -->
+</body>
+</html>
